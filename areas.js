@@ -1,5 +1,4 @@
-import { question } from "readline-sync"
-
+import { mostrar_texto, obter_numero, obter_numero_positivo, obter_string } from "./funcoes_utils.js"
 
 function main() {
 
@@ -259,8 +258,6 @@ function calcular_proporcao(area_menor, area_maior) {
 
 }
 
-//Funções Genéricas
-
 function contem_na_colecao(item, colecao) {
 
     for (let elemento of colecao) {
@@ -276,51 +273,5 @@ function contem_na_colecao(item, colecao) {
     return false
 
 }
-
-
-function mostrar_texto(texto) {
-
-    return console.log(texto)
-
-}
-
-function obter_string(label = 'Insira uma string: ') {
-
-    let string = question(label)
-
-    return string
-
-}
-
-function obter_numero_positivo(label = 'Insira um número: ') {
-
-    let numero = question(label)
-
-    if (numero < 0) {
-
-        mostrar_texto('VALORES NEGATIVOS SÃO INVÁLIDOS! TENTE NOVAMENTE.')
-
-        obter_numero_positivo()
-    }
-
-    return numero
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 main()
